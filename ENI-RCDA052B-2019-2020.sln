@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAppConsole", "DemoAppCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule2", "TPModule2\TPModule2.csproj", "{72F35FFD-F886-4507-9B9C-29B3C91BDD06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule3", "TPModule3\TPModule3.csproj", "{89DF5F94-714B-495F-9C4C-BA5FA0E45F79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{72F35FFD-F886-4507-9B9C-29B3C91BDD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72F35FFD-F886-4507-9B9C-29B3C91BDD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72F35FFD-F886-4507-9B9C-29B3C91BDD06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89DF5F94-714B-495F-9C4C-BA5FA0E45F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89DF5F94-714B-495F-9C4C-BA5FA0E45F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89DF5F94-714B-495F-9C4C-BA5FA0E45F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89DF5F94-714B-495F-9C4C-BA5FA0E45F79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
