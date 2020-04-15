@@ -17,7 +17,6 @@ namespace DemoAppConsole
 
             // Read only
             //class1.MyProperty1 = 10;
-            
             Console.ReadKey();
         }
     }
