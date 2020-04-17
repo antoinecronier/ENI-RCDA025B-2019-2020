@@ -32,7 +32,10 @@
                         @Html.DisplayFor(modelItem => item.Age)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Couleur)
+                        @if (item.Couleur != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.Couleur.Name)
+                        }
                     </td>
                     <td>
                         @Html.ActionLink("Details", "Details", new { id = item.Id }) |

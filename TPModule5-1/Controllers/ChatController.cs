@@ -17,6 +17,33 @@ namespace TPModule5_1.Controllers
             return View(FakeDbCat.Instance.Chats);
         }
 
+        public ActionResult Create()
+        {
+            ChatCreateViewModel vm = new ChatCreateViewModel();
+            vm.Couleurs.Add(new Couleur() { Id = 1, Name = "Blanc" });
+            vm.Couleurs.Add(new Couleur() { Id = 2, Name = "Noir" });
+            vm.Couleurs.Add(new Couleur() { Id = 3, Name = "Rouge" });
+            vm.Couleurs.Add(new Couleur() { Id = 4, Name = "Bleu" });
+            return View(vm);
+        }
+
+        [HttpPost]
+        public ActionResult Create(ChatCreateViewModel vm)
+        {
+            try
+            {
+                vm.Chat.Couleur = vm.Couleurs.FirstOrDefault(x => x.Id == vm.IdCouleur);
+                FakeDbCat.Instance.Chats.Add(vm.Chat);
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                return View(vm);
+            }
+            
+            
+        }
+
         // GET: Chat/Details/5
         public ActionResult Details(int id)
         {

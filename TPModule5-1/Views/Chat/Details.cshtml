@@ -31,7 +31,10 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Couleur)
+            @if (Model.Couleur != null)
+            {
+                @Html.DisplayFor(model => model.Couleur.Name)
+            }
         </dd>
 
     </dl>
