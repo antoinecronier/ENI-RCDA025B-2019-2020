@@ -9,7 +9,7 @@ namespace TPModule5_2.Utils
 {
     public static class Hydratator
     {
-        public static object Hydrate<T>(T item) where T : new()
+        public static T Hydrate<T>(this T item) where T : new()
         {
             T result = new T();
             item.GetType().GetMembers();
