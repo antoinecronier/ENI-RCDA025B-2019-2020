@@ -11,7 +11,6 @@ namespace TPModule5_2_BO
     {
         public int Id { get; set; }
 
-        [StringLength(20,MinimumLength = 5)]
         public string Nom { get; set; }
 
         public Pate Pate { get; set; }
