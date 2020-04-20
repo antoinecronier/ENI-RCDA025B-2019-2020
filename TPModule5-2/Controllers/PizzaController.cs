@@ -88,44 +88,6 @@ namespace TPModule5_2.Controllers
        private bool ValidateVM(PizzaViewModel vm)
         {
             bool result = true;
-
-            if (vm.IdsIngredients.Count < 2 || vm.IdsIngredients.Count > 5)
-            {
-                ModelState.AddModelError("IdsIngredients", "Il faut sélectionner entre 2 et 5 ingredients");
-                result = false;
-            }
-
-            if (FakeDb.Instance.Pizzas.FirstOrDefault(x => x.Nom == vm.Pizza.Nom) != null)
-            {
-                ModelState.AddModelError("Pizza.Nom.AlreadyExists", "Il existe déjà une pizza avec ce nom");
-                result = false;
-            }
-
-            foreach (var pizza in FakeDb.Instance.Pizzas)
-            {
-                if (vm.IdsIngredients.Count == pizza.Ingredients.Count)
-                {
-                    bool isDifferent = false;
-                    List<Ingredient> pizzaDb = pizza.Ingredients.OrderBy(x => x.Id).ToList();
-                    vm.IdsIngredients = vm.IdsIngredients.OrderBy(x => x).ToList();
-                    for (int i = 0; i < vm.IdsIngredients.Count; i++)
-                    {
-                        if (vm.IdsIngredients.ElementAt(i) != pizzaDb.ElementAt(i).Id)
-                        {
-                            isDifferent = true;
-                            break;
-                        }
-                    }
-
-                    if (!isDifferent)
-                    {
-                        ModelState.AddModelError("Ingredient.AlreadyExists", "Il existe déjà une pizza avec ces ingredients");
-                        result = false;
-                    }
-                }
-            }
-           
-
             return result;
         }
 

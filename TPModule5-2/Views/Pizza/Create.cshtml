@@ -1,4 +1,5 @@
 ﻿@model TPModule5_2.Models.PizzaViewModel
+@using TPModule5_2.Helpers
 
 @{
     ViewBag.Title = "Create";
@@ -7,19 +8,15 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
-    @Html.Partial("_PizzaDisplay")
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
-        </div>
+    <div class="form-horizontal">
+        @Html.Partial("_PizzaDisplay")
+
+        @Html.CustomSubmit("Create")
     </div>
-</div>
 }
 
 <div>
