@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWebApplication", "DemoW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule5-1", "TPModule5-1\TPModule5-1.csproj", "{69B7997B-03D6-45E0-9C68-B65E7628552C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule5-2-BO", "TPModule5-2-BO\TPModule5-2-BO.csproj", "{6066EAAA-6025-49BC-A1F3-FC6447C42CD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule5-2", "TPModule5-2\TPModule5-2.csproj", "{8C2221D1-E99E-409D-BAFC-24CCC6819866}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{69B7997B-03D6-45E0-9C68-B65E7628552C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69B7997B-03D6-45E0-9C68-B65E7628552C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69B7997B-03D6-45E0-9C68-B65E7628552C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6066EAAA-6025-49BC-A1F3-FC6447C42CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6066EAAA-6025-49BC-A1F3-FC6447C42CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6066EAAA-6025-49BC-A1F3-FC6447C42CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6066EAAA-6025-49BC-A1F3-FC6447C42CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C2221D1-E99E-409D-BAFC-24CCC6819866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2221D1-E99E-409D-BAFC-24CCC6819866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2221D1-E99E-409D-BAFC-24CCC6819866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2221D1-E99E-409D-BAFC-24CCC6819866}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

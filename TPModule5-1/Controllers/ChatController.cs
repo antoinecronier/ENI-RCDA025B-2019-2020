@@ -32,6 +32,10 @@ namespace TPModule5_1.Controllers
         {
             try
             {
+                vm.Couleurs.Add(new Couleur() { Id = 1, Name = "Blanc" });
+                vm.Couleurs.Add(new Couleur() { Id = 2, Name = "Noir" });
+                vm.Couleurs.Add(new Couleur() { Id = 3, Name = "Rouge" });
+                vm.Couleurs.Add(new Couleur() { Id = 4, Name = "Bleu" });
                 vm.Chat.Couleur = vm.Couleurs.FirstOrDefault(x => x.Id == vm.IdCouleur);
                 FakeDbCat.Instance.Chats.Add(vm.Chat);
                 return RedirectToAction("Index");
