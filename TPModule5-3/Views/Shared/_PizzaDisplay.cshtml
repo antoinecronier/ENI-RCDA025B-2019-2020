@@ -2,6 +2,7 @@
 
 <h4>Pizza</h4>
 <hr />
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
 <div class="form-group">
     @Html.LabelFor(model => model.Pizza.Nom, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -23,7 +24,7 @@
     <div class="col-md-10">
         @if (Model.Pates != null && Model.Pates.Count > 0)
         {
-            @Html.DropDownListFor(model => model.IdPate, Model.Pates, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.DropDownListFor(model => model.IdPate, Model.Pates, "Selectionner une pate", new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Pizza.Pate, "", new { @class = "text-danger" })
         }
         else
@@ -40,7 +41,7 @@
         @if (Model.Ingredients != null && Model.Ingredients.Count > 0)
         {
             @Html.ListBoxFor(model => model.IdsIngredients, Model.Ingredients, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Pizza.Ingredients, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.IdsIngredients, "", new { @class = "text-danger" })
         }
         else
         {

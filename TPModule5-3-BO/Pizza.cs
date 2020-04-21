@@ -11,6 +11,9 @@ namespace TPModule5_3_BO
     {
         public int Id { get; set; }
 
+        [Required]
+        [MinLength(5)]
+        [MaxLength(25)]
         public string Nom { get; set; }
 
         public Pate Pate { get; set; }
