@@ -85,6 +85,7 @@ namespace TPModule6_1.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             SamouraiViewModel vm = new SamouraiViewModel();
+            //vm.Samourai = db.Samourais.Include(x => x.Arme).FirstOrDefault(x => x.Id == id);
             vm.Samourai = db.Samourais.Find(id);
             if (vm.Samourai == null)
             {
@@ -92,6 +93,10 @@ namespace TPModule6_1.Controllers
             }
 
             vm.Armes = db.Armes.ToList();
+            if (vm.Samourai.Arme != null)
+            {
+                vm.IdSelectedArme = vm.Samourai.Arme.Id;
+            }
 
             return View(vm);
         }
