@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule6-1-BO", "TPModule6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule6-1", "TPModule6-1\TPModule6-1.csproj", "{7398A0E0-2E0C-4922-B205-0A8CDA9A3292}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule6-2", "TPModule6-2\TPModule6-2.csproj", "{EA320502-9699-4700-9010-7A7F75B591BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule6-2-BO", "TPModule6-2-BO\TPModule6-2-BO.csproj", "{D19DB952-F07E-4848-AA6D-122DED2FB33E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{7398A0E0-2E0C-4922-B205-0A8CDA9A3292}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7398A0E0-2E0C-4922-B205-0A8CDA9A3292}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7398A0E0-2E0C-4922-B205-0A8CDA9A3292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA320502-9699-4700-9010-7A7F75B591BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA320502-9699-4700-9010-7A7F75B591BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA320502-9699-4700-9010-7A7F75B591BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA320502-9699-4700-9010-7A7F75B591BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D19DB952-F07E-4848-AA6D-122DED2FB33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D19DB952-F07E-4848-AA6D-122DED2FB33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D19DB952-F07E-4848-AA6D-122DED2FB33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D19DB952-F07E-4848-AA6D-122DED2FB33E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
