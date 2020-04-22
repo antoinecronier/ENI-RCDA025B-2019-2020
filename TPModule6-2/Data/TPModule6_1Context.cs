@@ -18,6 +18,23 @@ namespace TPModule6_2.Data
     
         public TPModule6_2Context() : base("name=TPModule6_2Context")
         {
+            if (!this.Database.CompatibleWithModel(true))
+            {
+                //var samourais = this.Samourais.ToList();
+                //var armes = this.Armes.ToList();
+                //var artMartials = this.ArtMartials.ToList();
+                //if (this.Database.Exists())
+                //{
+                //    this.Database.Delete();
+
+                //    if (this.Database.CreateIfNotExists())
+                //    {
+                //        this.Armes.AddRange(armes);
+                //        this.ArtMartials.AddRange(artMartials);
+                //        this.Samourais.AddRange(samourais);
+                //    }
+                //}
+            }
         }
 
         public System.Data.Entity.DbSet<BO.Arme> Armes { get; set; }
