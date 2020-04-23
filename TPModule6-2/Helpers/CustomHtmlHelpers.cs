@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -6,6 +7,7 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
+using WebGrease.Css.Extensions;
 
 namespace TPModule6_2.Helpers
 {
@@ -48,14 +50,15 @@ namespace TPModule6_2.Helpers
             return MvcHtmlString.Create(result.ToString());
         }
 
-        public static MvcHtmlString AddAttributs(this HtmlHelper htmlHelper, Type type, object data, bool isDiplay, String[] hiddenFields, String[] ignoringFields, Dictionary<String,List<SelectListItem>> valuesMaping)
+        public static MvcHtmlString AddAttributs(this HtmlHelper htmlHelper, Type type, object data, bool isDiplay, String[] hiddenFields, String[] ignoringFields, List<PropertyListConstraint> propertyListConstraint)
         {
             StringBuilder result = new StringBuilder();
 
             PropertyInfo[] properties = type.GetProperties();
             foreach (var property in properties)
             {
-                if (!ignoringFields.Contains(property.Name) && !hiddenFields.Contains(property.Name))
+                if (!ignoringFields.Contains(property.Name) 
+                    && !hiddenFields.Contains(property.Name))
                 {
                     result.Append($"<div class=\"form-group\">");
 
@@ -64,9 +67,34 @@ namespace TPModule6_2.Helpers
 
                     result.Append($"<div class=\"col-md-10\">");
 
-                    if (property.PropertyType.IsGenericType && property.PropertyType.GetGenericTypeDefinition() == typeof(List<>))
+                    //if (property.PropertyType.IsGenericType && property.PropertyType.GetGenericTypeDefinition() == typeof(List<>))
+                    if (propertyListConstraint.SingleOrDefault(x => x.TargetProperty == property.Name) != null)
                     {
+                        PropertyListConstraint constraint = propertyListConstraint.SingleOrDefault(x => x.TargetProperty == property.Name);
+                        if (constraint.IsMonoSelection)
+                        {
+                            result.Append($"<select data-val=\"true\" class=\"form-control\" id=\"{ constraint.NewPropertyName }\" name=\"{ constraint.NewPropertyName }\">");
+                            if (!String.IsNullOrEmpty(constraint.DefaultEmpty))
+                            {
+                                result.Append($"<option value=\"\">{ constraint.DefaultEmpty }</option>");
+                            }
+                            foreach (var item in constraint.Datas)
+                            {
+                                if (property.GetValue(data) != null)
+                                {
+                                    result.Append($" selected=\"selected\"");
+                                }
+                                else
+                                {
+                                    result.Append($"<option value=\"{ item.Value }\">{ item.Text }</option>");
+                                }
+                            }
+                            result.Append($"</select>");
+                        }
+                        else
+                        {
 
+                        }
                     }
                     else
                     {

@@ -210,6 +210,12 @@ namespace TPModule6_2.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Samourai samourai = db.Samourais.Find(id);
+            foreach (var item in samourai.ArtMartials)
+            {
+                db.Entry(item).State = EntityState.Modified;
+            }
+            samourai.ArtMartials.Clear();
+
             db.Samourais.Remove(samourai);
             db.SaveChanges();
             return RedirectToAction("Index");

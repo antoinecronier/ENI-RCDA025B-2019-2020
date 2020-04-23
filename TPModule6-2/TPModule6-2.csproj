@@ -135,6 +135,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CustomHtmlHelpers.cs" />
+    <Compile Include="Helpers\PropertyListConstraint.cs" />
     <Compile Include="Migrations\202003231441495_TPModule6-1-base-db.cs" />
     <Compile Include="Migrations\202003231441495_TPModule6-1-base-db.Designer.cs">
       <DependentUpon>202003231441495_TPModule6-1-base-db.cs</DependentUpon>
